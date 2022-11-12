@@ -1,0 +1,27 @@
+{% extends './base.html'%} {% block content %}
+<div class="col-8 mt-5 full-width">
+  <form method="post" class="d-flex align-tems-center justify-content-center">
+    {% csrf_token %} {% for field in form %}
+    <div class="col-9 col-sm-6">{{field}}</div>
+    {% endfor %}
+    <button type="submit" name="button" class="btn btn-outline-success mx-2">
+      Create
+    </button>
+  </form>
+</div>
+<div class="col-9 col-sm-5 mt-5 full-width">
+  {% for task in tasks %}
+  <div class="card my-2">
+    <div class="card-body d-flex justify-content-between">
+      {{task.title}}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock%}

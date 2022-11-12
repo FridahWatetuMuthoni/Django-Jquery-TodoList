@@ -1,0 +1,22 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+
+.full-width{
+    width: 100%;
+    margin: auto;
+}
+
+@media (min-width:768px) {
+    .full-width{
+    width: 80%;
+}
+}
+
+@media (min-width:990px) {
+    .full-width{
+    width: 500px;
+}
+}
