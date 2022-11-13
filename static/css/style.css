@@ -3,10 +3,18 @@ body{
     font-weight: 300;
 }
 
+#task-card:hover{
+    cursor: pointer;
+}
 
 .full-width{
     width: 100%;
     margin: auto;
+}
+
+.line-through{
+    text-decoration: line-through;
+    color:red;
 }
 
 @media (min-width:768px) {
