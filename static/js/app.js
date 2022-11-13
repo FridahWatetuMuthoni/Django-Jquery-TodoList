@@ -25,7 +25,7 @@ $(document).ready(function(){
                 <div id="task-card" class="card my-2" data-id="${response.task.id}">
                     <div class="card-body d-flex justify-content-between">
                         ${response.task.title}
-                    <button type="button" id='delete' data-id="${response.task.id} class="btn-close">&#10540;</button>
+                    <button type="button" id='delete' data-id="${response.task.id}" class="btn-close"></button>
                     </div>
                 </div>
                 `
@@ -78,6 +78,8 @@ $(document).ready(function(){
             success:function(response){
                 const current_task = $(`#task-card[data-id=${delete_id}]`)
                 current_task.remove()
+                location.reload(true)
+
             }
         })
     }) 
